@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Title -->
+    <title>Perfect Repair</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+      integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/8e551b8833.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <!--Font Awesome css-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <!--Magnific css-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!--Owl-Carousel css-->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <!--Animate css-->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <!--Nice Select css-->
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <!--Slicknav css-->
+    <link rel="stylesheet" href="assets/css/slicknav.min.css" />
+    <!--Site Main Style css-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!--Responsive css-->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+
+    <style>
+      .modal-dialog {
+        width: 300px;
+        top: 100px;
+        margin: 0 auto;
+      }
+      @media (max-width: 500px) {
+        .modal-dialog {
+          width: 250px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Modal -->
+    <div
+      id="myModal"
+      class="modal fade show in"
+      role="dialog"
+      style="display: block"
+    >
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" style="font-size: 23px">
+              Get A Call<a
+                onClick="handleClicks"
+                href="/default.html"
+                class="cls"
+                type="button"
+                style="
+                  float: right;
+                  float: right;
+                  padding: 6px;
+                  background-color: #ff9800;
+                  color: #000;
+                  position: absolute;
+                  top: 15px;
+                  right: 22px;
+                "
+                >x</a
+              >
+            </h4>
+          </div>
+          <div class="modal-body">
+            <form
+              action="https://code.dvtpl.in/thanku.php"
+              class="form-horizontal"
+              style="margin: 0px"
+              method="post"
+              onSubmit="return ValidateForm(this);"
+            >
+              <script type="text/javascript">
+                function ValidateForm(frm) {
+                  if (frm.mobile.value == "" || frm.mobile.value == null) {
+                    alert("Mobile number is required.");
+                    frm.mobile.focus();
+                    return false;
+                  }
+
+                  function ReloadCaptchaImage(captchaImageId) {
+                    var obj = document.getElementById(captchaImageId);
+                    var src = obj.src;
+                    var date = new Date();
+                    var pos = src.indexOf("&rad=");
+                    if (pos >= 0) {
+                      src = src.substr(0, pos);
+                    }
+                    obj.src = src + "&rad=" + date.getTime();
+                    return false;
+                  }
+                }
+              </script>
+              <script>
+                function isNumber(evt) {
+                  evt = evt ? evt : window.event;
+                  var charCode = evt.which ? evt.which : evt.keyCode;
+                  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    return false;
+                  }
+                  return true;
+                }
+              </script>
+
+              <fieldset>
+                <!-- Form Name -->
+                <!-- Text input-->
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="mobile"
+                      pattern="[0-9]{10,10}"
+                      autocomplete="off"
+                      maxlength="10"
+                      id="extra7"
+                      onKeyPress="return isNumber(event)"
+                      placeholder="Enter Mobile Number"
+                      aria-describedby="basic-addon1"
+                      style="border: 2px solid #4ab242; margin-bottom: 10px"
+                    />
+                  </div>
+                </div>
+                <input
+                  type="hidden"
+                  name="name"
+                  class="box-div"
+                  value="send enquiry"
+                />
+                <input
+                  type="hidden"
+                  class="box-div"
+                  name="email"
+                  value="send enquiry"
+                />
+                <input
+                  type="hidden"
+                  class="box-div"
+                  name="msg"
+                  value="enquiry from pop up"
+                />
+                <!-- Text input-->
+                <!-- Text input-->
+                <!-- Button -->
+                <!-- Mention the Client Mail ID's on which information have to send -->
+                <input
+                  name="clientMailID"
+                  type="hidden"
+                  value="perfectrepair29@gmail.com"
+                />
+
+                <!-- Website Name where to divert for conversion -->
+                <input
+                  name="website"
+                  type="hidden"
+                  value="perfectrepair.in/thanku.html"
+                />
+                <!-- Auto Incremented -->
+                <input name="loginID" type="hidden" value="11167" />
+                <!-- Company Name -->
+                <input
+                  name="companyName"
+                  type="hidden"
+                  value="Perfect Repairs"
+                />
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <input
+                      type="submit"
+                      class="btn btn-style-one"
+                      value="Send"
+                      class="btn"
+                    />
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--============ Main Header Area Start =============-->
+    <header class="felona-header-area">
+      <!--========== Header Top Area Start ===========-->
+      <div class="header-top-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="header-top-left">
+                <p>
+                  <i class="fa fa-phone"></i> Hire an Expert : +91 8630169795
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="header-top-right">
+                <ul>
+                  <li>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--========== Header Top Area End ===========-->
+
+      <!--=========== Logo Area Start ==============-->
+      <div class="header-logo-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="site-logo">
+                <a href="default.html">
+                  <img src="assets/img/logo.png" alt="felona" />
+                </a>
+              </div>
+              <!-- Responsive Menu Start -->
+              <div class="felona-responsive-menu"></div>
+              <!-- Responsive Menu End -->
+            </div>
+            <div class="col-lg-9">
+              <div class="header-widget-box">
+                <div class="single-header-widget">
+                  <div class="header-widget-icon">
+                    <i class="fa fa-mobile"></i>
+                  </div>
+                  <div class="header-widget-text">
+                    <h3>call us</h3>
+                    <p>+91 <a href="tel:8630169795">8630169795</a></p>
+                  </div>
+                </div>
+                <div class="single-header-widget">
+                  <div class="header-widget-icon">
+                    <i class="fa fa-map-marker"></i>
+                  </div>
+                  <div class="header-widget-text">
+                    <h3>Find Us</h3>
+                    <p>
+                      Tagore Garden Extension, Near Holy Child School, New Delhi
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--=========== Logo Area End ================-->
+
+      <!--============ Mainmenu Area Start =============-->
+      <div class="mainmenu-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="mainmenu-box">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="mainmenu">
+                      <nav>
+                        <ul id="felona_navigation">
+                          <li class="active">
+                            <a href="default.html">Home</a>
+                          </li>
+                          <li><a href="#about">About Us</a></li>
+                          <li><a href="#service">Services</a></li>
+                          <!--<li style="display: none;">
+                            <a href="#">services</a>
+                            <ul>
+                            <li><a href="Gas-Stove-Repair.html">Gas Stove Repair</a></li>
+                            <li><a href="Gas-Stove-#service">Gas Stove Service</a></li>
+                            <li><a href="Gas-Stove-Installation.html">Gas Stove Installation</a></li>
+                            <li><a href="Cooking-Range-Repair.html">Cooking Range Repair</a></li>
+                            <li><a href="Cooking-Range-#service">Cooking Range Service</a></li>
+                            <li><a href="Gas-Chulha-Repair.html">Gas Chulha Repair</a></li>
+                            <li><a href="Gas-Chulha-#service">Gas Chulha Service</a></li>
+                            <li><a href="Hob-Repair.html">Hob Repair</a></li>
+                            <li><a href="Hob #service">Hob Service</a></li>
+                            </ul>
+                            </li>-->
+
+                          <li><a href="#contact">Contact</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--============ Mainmenu Area End ===============-->
+    </header>
+    <!--============ Main Header Area End =================-->
+
+    <!--=========== Slider Area Start ============-->
+    <section class="felona-slider-area">
+      <div class="felona-slide owl-carousel">
+        <div class="felona-main-slide slide-item-1">
+          <div class="felona-main-caption">
+            <div class="felona-caption-cell">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="slider-text">
+                      <h2>Faulty LED/LCD TV? We will get it fixed</h2>
+                      <p>
+                        Are you looking for a professional to repair your
+                        LED/LCD TV? We ensure that your LED performance will be
+                        as good as when you first bought them!
+                      </p>
+                      <a href="tel:8630169795" class="felona-btn"
+                        >+91 8630169795 <i class="fa fa-angle-double-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="felona-main-slide slide-item-2">
+          <div class="felona-main-caption">
+            <div class="felona-caption-cell">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="slider-text">
+                      <h2>Fast Quick Fix</h2>
+                      <p>
+                        Just send valuable LED/LCD TV and we'll take care of it.
+                      </p>
+                      <a href="tel:8630169795" class="felona-btn"
+                        >+91 8630169795 <i class="fa fa-angle-double-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=========== Slider Area End ===============-->
+
+    <!--=========== About Area Start ==========-->
+    <section class="felona-about-area section_70">
+      <div class="container">
+        <div class="row" id="about">
+          <div class="col-lg-6">
+            <div class="about-left">
+              <div class="about-heading">
+                <div class="about-heading-left">
+                  <h2 class="text_bg">2021</h2>
+                </div>
+                <div class="about-heading-right">
+                  <!--                        <p>12 Years Experience</p>-->
+                  <h3>Welcome to Perfect Repairs Service</h3>
+                </div>
+              </div>
+              <p>
+                We are dedicated professionals having 8 years of experience in
+                the repair of multi-brand LED/LCD Televisions and multi-brand
+                Audio systems like AVR, DJ mixers etc. Our mission is to restore
+                your entertainment factor as soon as possible with improved
+                performance. We perform accurate fault detection so that our
+                client only needs to pay reasonably. Customer satisfaction is
+                what we value most and thus we offer a precise fault diagnosis
+                and repair so it avoids the need for a re-service.
+              </p>
+              <br />
+
+              <p>
+                We offer the best service in panel bonding/ repairing of LCD or
+                LED(QLED, 3D, 4K, Curved tv) television of 32-80 inches of
+                multi-brands like SAMSUNG, SONY, SHARP, PHILIPS, LLOYD, TOSHIBA,
+                HAIER, PANASONIC etc. Our trained and experienced professionals
+                will make sure your television panel is repaired or bonded with
+                care.
+              </p>
+              <div class="about-action">
+                <a href="tel:8630169795"
+                  >Call Us <i class="fa fa-long-arrow-right"></i
+                ></a>
+              </div>
+              <!--
+                        <div class="about-info">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="single-info">
+                                        <div class="info-icon">
+                                            <img src="assets/img/support.png" alt="support" />
+                                        </div>
+                                        <div class="info-text">
+                                            <h4>24/7 Online <span>Support</span></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="single-info">
+                                        <div class="info-icon">
+                                            <img src="assets/img/target.png" alt="target" />
+                                        </div>
+                                        <div class="info-text">
+                                            <h4>10 Years of <span>Experience</span></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="single-info">
+                                        <div class="info-icon">
+                                            <img src="assets/img/staff.png" alt="support" />
+                                        </div>
+                                        <div class="info-text">
+                                            <h4>Creative <span>Staff</span></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+-->
+            </div>
+          </div>
+          <div class="col-lg-5 offset-lg-1">
+            <div class="about-right">
+              <img
+                src="assets/img/about.webp"
+                alt="about image"
+                class="about-img"
+              />
+              <img
+                src="assets/img/about-1.jpg"
+                alt="about image"
+                class="about-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--============ About Area End ============-->
+
+    <!--========== Counter Area Start =============-->
+    <section class="felona-counter-area section_100">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="counter-box-heading">
+              <!--                        <h3>Best Home appliance repair company</h3>-->
+              <h2>Acheivements</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!--
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-box">
+                        <h3><span class="counter">2500</span></h3>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-box">
+                        <h3><span class="counter">285</span></h3>
+                        <p>Experienced Workers</p>
+                    </div>
+                </div>
+-->
+          <div class="col-lg-6 col-sm-6">
+            <div class="counter-box">
+              <h3><span class="counter">20</span></h3>
+              <p>Year of Experience</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <div class="counter-box">
+              <h3><span class="counter">15000</span></h3>
+              <p>Happy Customers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--========= Counter Area End ================-->
+
+    <!--=============== Service Area Start ====================-->
+    <section class="felona-service-area section_70">
+      <div class="container" id="service">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="site-heading">
+              <h4>OUR SERVICES</h4>
+              <h2>
+                Please come in for a chat, installation, repair,
+                <span> whatever it is, we can help</span>
+              </h2>
+              <!--                        <p>We are one of the most noteworthy reputed and affordable service providers for Gas Stove, Hob & Cooking Range Repair Service Installation Mumbai, Pune, and gurgaon India.</p>-->
+            </div>
+          </div>
+          <!--
+                <div class="col-lg-3">
+                    <div class="load-more-action">
+                        <a href="#service">Explore All Services <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+-->
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="single-service">
+              <div class="service-image">
+                <a href="#service">
+                  <img
+                    src="assets/img/service/s1.webp"
+                    alt="LED TV REPAIR EXPERT"
+                  />
+                </a>
+              </div>
+              <div class="service-desc">
+                <h3>
+                  <a href="#service">LED TV REPAIR EXPERT</a>
+                </h3>
+                <p>
+                  At the heart of our business is a desire to offer quality
+                  service and honest advice.
+                </p>
+                <div class="service-box-action">
+                  <a href="tel:8630169795" class="felona-btn-border"
+                    >call Us <i class="fa fa-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="single-service">
+              <div class="service-image">
+                <a href="#">
+                  <img src="assets/img/service/s2.webp" alt="LCD TV REPAIR" />
+                </a>
+              </div>
+              <div class="service-desc">
+                <h3>
+                  <a href="#service">LCD TV REPAIR</a>
+                </h3>
+                <p>
+                  The majority of our Pre-Owned equipment comes to us as a
+                  trade-in.
+                </p>
+                <div class="service-box-action">
+                  <a href="tel:8630169795" class="felona-btn-border"
+                    >call Us <i class="fa fa-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="single-service">
+              <div class="service-image">
+                <a href="#service">
+                  <img
+                    src="assets/img/service/s3.webp"
+                    alt="PLASMA TV REPAIR"
+                  />
+                </a>
+              </div>
+              <div class="service-desc">
+                <h3>
+                  <a href="#service">PLASMA TV REPAIR</a>
+                </h3>
+                <p>
+                  If you require assistance with set up of equipment we can
+                  offer home visits by arrangement.
+                </p>
+                <div class="service-box-action">
+                  <a href="tel:8630169795" class="felona-btn-border"
+                    >call Us <i class="fa fa-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Service Area End ===================-->
+
+    <!--=============== Service Area Start ====================-->
+    <section class="felona-service-area section_70">
+      <div class="container" id="service">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="site-heading">
+              <!--                        <h4>WHAT WE DO?</h4>-->
+              <h2>Why Choose Us <span></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="single-service">
+              <div class="service-desc">
+                <h3>
+                  <a href="#service">100% GENUINE PARTS</a>
+                </h3>
+                <p>Available with quick hands-on warranty.</p>
+                <div class="service-box-action">
+                  <a href="tel:8630169795" class="felona-btn-border"
+                    >call Us <i class="fa fa-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="single-service">
+              <div class="service-desc">
+                <h3>
+                  <a href="#service">HIGHLY SKILLED TEAM</a>
+                </h3>
+                <p>
+                  Our technicians are highly skilled with expertise in what they
+                  do.
+                </p>
+                <div class="service-box-action">
+                  <a href="tel:8630169795" class="felona-btn-border"
+                    >call Us <i class="fa fa-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="single-service">
+              <div class="service-desc">
+                <h3>
+                  <a href="#service">REPAIR ALL BRANDS </a>
+                </h3>
+                <p>For eg. Samsung, MI, Sony, LG and a lot more.</p>
+                <div class="service-box-action">
+                  <a href="tel:8630169795" class="felona-btn-border"
+                    >call Us <i class="fa fa-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="single-service">
+              <div class="service-desc">
+                <h3>
+                  <a href="#service"> AFFORDABLE PRICE </a>
+                </h3>
+                <p>
+                  We guarantee you the best pricing policies with the best
+                  services.
+                </p>
+                <div class="service-box-action">
+                  <a href="tel:8630169795" class="felona-btn-border"
+                    >call Us <i class="fa fa-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="single-service">
+              <div class="service-desc">
+                <h3>
+                  <a href="#service"> QUICK DOORSTEP SERVICE</a>
+                </h3>
+                <p>
+                  Our technicians are here to make the repairs quicker and
+                  easier for you at your place now. Doorstep services are
+                  available.
+                </p>
+                <div class="service-box-action">
+                  <a href="tel:8630169795" class="felona-btn-border"
+                    >call Us <i class="fa fa-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="single-service">
+              <div class="service-desc">
+                <h3>
+                  <a href="#service">100% CUSTOMER SATISFACTION</a>
+                </h3>
+                <p>
+                  We are serving our customers for over 15 years with complete
+                  trust and belief.
+                </p>
+                <div class="service-box-action">
+                  <a href="tel:8630169795" class="felona-btn-border"
+                    >call Us <i class="fa fa-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="single-service">
+              <div class="service-desc">
+                <h3>
+                  <a href="#service">ANY ISSUES ANY DEVICE</a>
+                </h3>
+                <p>Our technicians repair all type of TV for all brands.</p>
+                <div class="service-box-action">
+                  <a href="tel:8630169795" class="felona-btn-border"
+                    >call Us <i class="fa fa-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="single-service">
+              <div class="service-desc">
+                <h3>
+                  <a href="#service"> 24X7 SUPPORT</a>
+                </h3>
+                <p>Reach out to us.</p>
+                <div class="service-box-action">
+                  <a href="tel:8630169795" class="felona-btn-border"
+                    >call Us <i class="fa fa-angle-double-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Service Area End ===================-->
+
+    <!--============ Request Area Start ==================-->
+    <!--<section class="felona-request-area">
+          <img src="assets/img/get_quote_bg.png" alt="Quote Bg" />
+           <div class="container">
+            <div class="col-md-12">
+               <div class="request-inner">
+                  <div class="request-left">
+                   <p>Free Consultation</p>
+                    <h3>Get a Free Quote</h3>
+                     <form>
+                        <div class="row">
+                         <div class="col-md-6">
+                          <p>
+                           <input type="text" placeholder="Full Name" />
+                           </p>
+                           </div>
+                           <div class="col-md-6">
+                           <p>
+                           <input type="email" placeholder="Email Address" />
+                           </p>
+                           </div>
+                           </div>
+                           <div class="row">
+                           <div class="col-md-6">
+                            <p>
+                            <input type="tel" placeholder="Phone Number" />
+                            </p>
+                           </div>
+                           <div class="col-md-6">
+                           <p>
+                           <input type="text" placeholder="Zip Code" />
+                           </p>
+                           </div>
+                           </div>
+                           <div class="row">
+                           <div class="col-md-12">
+                           <p>
+                           <select class="wide">
+                            <option selected>Select Service</option>
+							<option>Chimney Repair & service</option>
+                            <option>Gas Stove Repair</option>
+                            <option>Gas Stove Service</option>
+                            <option>Gas Stove Installation </option>
+                            <option>Hob Repair</option>
+                            <option>Hob Service</option>
+                            </select>
+                            </p>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-md-12">
+                            <p>
+                            <textarea placeholder="Your Message"></textarea>
+                            </p>
+                           </div>
+                           </div>
+                           <div class="row">
+                           <div class="col-md-12">
+                           <p>
+                          <button type="submit">get a free quote</button>
+                         </p>
+                        </div>
+                       </div>
+                     </form>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+               </section>-->
+    <!--================= Request Area End ================-->
+
+    <!--========== Testimoinal Area Start =========-->
+    <section class="felona-testimonial-area section_70">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="site-heading">
+              <h4>Our Testimonial</h4>
+              <h2>What our client are <span> saying</span></h2>
+              <!--                        <p>Recently I contacted you to repair a washing machine.This was mid Friday afternoon and you had a service provider there within 2 hours. Very commendable.</p>-->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="testimonial-slide owl-carousel">
+              <div class="single-testimonial">
+                <div class="testimonial-text">
+                  <p>
+                    Excellent Service. Sony Engineer shown their inability to
+                    repair my TV, but when I contacted Mr. Karan at Perfect
+                    Repairs, I was surprised that my TV got repaired in few
+                    hours and that too at very reasonable price.The behaviour of
+                    owner and the staff visited my home was very polite and
+                    cooperative. I will definitely refer their services to my
+                    relatives and friends.
+                  </p>
+                  <h4>Sanjeev Sharma</h4>
+                </div>
+              </div>
+              <div class="single-testimonial">
+                <div class="testimonial-text">
+                  <p>
+                    I was looking for Sony led tv repair in Punjabi bagh then
+                    found perfect repairs in Tagore Garden as they provide sony
+                    led tv repair service in Punjabi bagh and near by are then I
+                    called them honestly I got prompt real from them and my Sony
+                    led tv back to working and also got 2 months post warranty
+                    on repairs . I would recommend to residence of Punjabi bagh
+                    to take there service when required.
+                  </p>
+                  <h4>Soni Shaheen</h4>
+                </div>
+              </div>
+              <div class="single-testimonial">
+                <div class="testimonial-text">
+                  <p>
+                    I was impressed by the efficiency and expertise of the
+                    technician as he repaired my TV screen in no time. Not only
+                    that, but he also gave me some useful tips on how to
+                    maintain my TV in the future. The price for the repair was
+                    also reasonable and within my budget.
+                  </p>
+                  <h4>AP CP</h4>
+                </div>
+              </div>
+
+              <div class="single-testimonial">
+                <div class="testimonial-text">
+                  <p>
+                    From the moment I contacted them, the customer service was
+                    top-notch. The representative was polite, patient, and
+                    knowledgeable, and helped me schedule a repair appointment
+                    at my convenience. On the day of the appointment, the
+                    technician arrived on time and was very professional.
+                  </p>
+                  <h4>Abhay Pratap singh</h4>
+                </div>
+              </div>
+
+              <div class="single-testimonial">
+                <div class="testimonial-text">
+                  <p>
+                    I was looking for MI led tv repair in delhi then I found
+                    perfect repair then I hired them for my MI led tv repair
+                    honestly charges was reasonable and prompt response. Best
+                    service centre for MI TV.
+                  </p>
+                  <h4>Sanjay Sinha</h4>
+                </div>
+              </div>
+
+              <div class="single-testimonial">
+                <div class="testimonial-text">
+                  <p>
+                    Quick Service, within 4 hours I got my TV repaired and
+                    installed. Prices are also cheaper than nearby repairing
+                    shop.
+                  </p>
+                  <h4>Mukesh Kumar</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--============== Testimoinal Area End ===============-->
+
+    <section>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448164.03538643435!2d76.5366637734375!3d28.651288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03f112841d27%3A0xd3e7cce8e6f4d9a1!2sPERFECT%20REPAIRS%20-%20LED%2FLCD%20TV%20REPAIR%20CENTRE!5e0!3m2!1sen!2sin!4v1706510985783!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <!--========== Footer Area Start ======================-->
+    <section class="felona-footer-area">
+      <div class="footer-top-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-sm-6">
+              <div class="single-footer">
+                <h3>About Us</h3>
+                <p>
+                  At Perfect Repairs Service, we are dedicated to providing
+                  top-notch gas appliance repair and maintenance services. With
+                  a commitment to safety, reliability, and customer
+                  satisfaction, we have established ourselves as a trusted name
+                  in the industry.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="single-footer">
+                <h3>Quick Links</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="quick_links">
+                      <li>
+                        <a href="default.html"
+                          ><i class="fa fa-angle-double-right"></i>Home
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#about"
+                          ><i class="fa fa-angle-double-right"></i>About Us
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#service"
+                          ><i class="fa fa-angle-double-right"></i>Services
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#contact"
+                          ><i class="fa fa-angle-double-right"></i>Contact Us
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6" id="contact">
+              <div class="single-footer">
+                <h3>Address</h3>
+                <div class="working-hours">
+                  <p>
+                    Tagore Garden Extension, Near Holy Child School, New Delhi
+                    110027
+                  </p>
+                  <p><a href="tel:8630169795">+91 8630169795</a></p>
+                  <p><a href="tel:9315709527">+91 9315709527</a></p>
+                  <p>Monday - Sunday: <span>6 A.M - 8 P.M</span></p>
+                  <p>
+                    Monday to Sunday:
+                    <span class="close_office">7 days Open</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <p class="text-center" style="margin-bottom: 0px">
+                © 2024 Perfect Repairs. All Rights Reserved | Design by
+                <a
+                  href="https://www.digitalvisiontechnology.com/"
+                  target="blank"
+                  style="color: #fff"
+                  >Digital <span id="v">Vision</span> Technology Pvt Ltd</a
+                >
+                <span class="g">G</span><span class="o">o</span
+                ><span class="oo">o</span><span class="gg">g</span
+                ><span class="l">l</span><span class="e">e</span>
+                <span class="p">Partner</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--============= Footer Area End =====================-->
+
+    <!--Jquery js-->
+    <script src="assets/js/jquery.min.html"></script>
+    <!-- Popper JS -->
+    <script src="assets/js/popper.min.js"></script>
+    <!--Bootstrap js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--Owl-Carousel js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--Slicknav js-->
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <!--Isotop js-->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/custom-isotop.js"></script>
+    <!--Magnific js-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--Nice Select js-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!-- Counter JS -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Way Points JS -->
+    <script src="assets/js/waypoints-min.js"></script>
+    <!--Main js-->
+    <script src="assets/js/main.js"></script>
+
+    <!-- <div class="call-btn">
+        <a href="tel:8630169795"><i class="fa fa-phone"></i> <span>Call Us</span></a>
+    </div>-->
+
+    <div id="callme">
+      <a href="tel:8630169795"><div id="callmeMain"></div></a>
+    </div>
+    <link
+      rel="stylesheet"
+      href="stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <p>
+      <a href="https://api.whatsapp.com/send?phone=918630169795" target="blank"
+        ><img src="assets/whatsapp.png" class="whatsup"
+      /></a>
+    </p>
+  </body>
+</html>
